@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid custom-navbar">
+    <div>
+      <a class="navbar-brand activeItem" href="/">
+	  	  <img class="logoVNU"  src="https://i.pinimg.com/originals/b8/88/2d/b8882dd5f9ec52553c4ea84f8730860e.png" atl="logo"/>
+	    </a>
+      <a class="navbar-brand" href="/Control">Control</a>
+      <a class="navbar-brand activeItem" href="/Monitor">Monitor</a>
+    </div>
+    <a class="navbar-brand logout" href="/logout">Logout</a>
+  </div>
+</nav>
+
+<div class="wrap-table">
+  {{#each monitordatas}}
+  <table class="table custom-table">
+    <thead>
+      <tr>
+        <th scope="col">Time</th>
+        <th scope="col">Temp</th>
+        <th scope="col">pH</th>
+        <th scope="col">Do</th>
+        <th scope="col">Roof</th>
+        <th scope="col">Fan</th>
+        <th scope="col">Aerator</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>{{this.temperature}}</td>
+        <td>{{this.pH}}</td>
+        <td>{{this.Do}}</td>
+        <td>{{this.Roof}}</td>
+        <td>{{this.Fan}}</td>
+        <td>{{this.Aerator}}</td>
+      </tr>
+    </tbody>
+  </table>
+  {{/each}}
+</div>

@@ -1,0 +1,86 @@
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid custom-navbar">
+    <div>
+      	<a class="navbar-brand activeItem" href="/">
+			<img class="logoVNU"  src="https://i.pinimg.com/originals/b8/88/2d/b8882dd5f9ec52553c4ea84f8730860e.png" atl="logo"/>
+		</a>
+		<a class="navbar-brand activeItem" href="/Control" >Control</a>
+    	<a class="navbar-brand" href="/Monitor">Monitor</a>
+	</div>
+    <a class="navbar-brand logout" href="/logout">Logout</a>
+  </div>
+</nav>
+
+<div class="wrap-control">
+	<div class="container">
+		
+			<div class="row custom-row" >
+				<div class="col-sm-6 col-lg-4 custom_cardItem">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">Fan</h5>
+							<button class="btn btn-primary" type="submit">On</button>
+							<button class="btn btn-primary" type="submit">Off</button>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="col-sm-6 col-lg-4 custom_cardItem">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">Roof</h5>
+							<div class="btn-group btn-group-custom" role="group" aria-label="Basic radio toggle button group">
+								<input type="radio" class="btn-check" name="btnradio-card-2" id="btnradio5" autocomplete="off">
+								<label class="btn btn-outline-primary" for="btnradio5">On</label>
+
+								<input type="radio" class="btn-check" name="btnradio-card-2" id="btnradio6" autocomplete="off">
+								<label class="btn btn-outline-primary" for="btnradio6">Off</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-6 col-lg-4 custom_cardItem">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">Aerator</h5>
+							<div class="btn-group btn-group-custom" role="group" aria-label="Basic radio toggle button group">
+								<input type="radio" class="btn-check" name="btnradio-card-3" id="btnradio8" autocomplete="off">
+								<label class="btn btn-outline-primary" for="btnradio8">On</label>
+
+								<input type="radio" class="btn-check" name="btnradio-card-3" id="btnradio9" autocomplete="off">
+								<label class="btn btn-outline-primary" for="btnradio9">Off</label>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		
+		
+		<div class="card">
+			{{#each controldatas}}
+				<div class="card-body">
+					{{!-- <h5 class="card-title">Card title</h5> --}}
+					<table class="table table-bordered border-primary table-control">
+						<tbody>
+							<tr>
+								<th scope="col">Temperature</th>
+								<th scope="col">pH</th>
+								<th scope="col">Do</th>
+							</tr>
+						</tbody>
+						<tbody>
+							<tr>
+								<th>{{this.temperature}}</th>
+								<th>{{this.pH}}</th>
+								<th>{{this.Do}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			{{/each}}		
+		</div>
+	</div>
+</div>
